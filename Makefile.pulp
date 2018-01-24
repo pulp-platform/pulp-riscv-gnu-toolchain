@@ -1,2 +1,3 @@
 build:
 	./configure --prefix=$(PKG_DIR) --with-arch=rv32imac --with-cmodel=medlow
+	make all install
