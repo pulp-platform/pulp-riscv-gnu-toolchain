@@ -108,3 +108,14 @@ To test GCC, run the following commands:
     make linux
     # Need qemu-riscv32 or qemu-riscv64 in your `PATH`.
     make check-gcc-linux
+
+### Installation (Pulp)
+
+To build the Newlib cross-compiler for all pulp variants, pick an install path.  If you choose,
+say, `/opt/riscv`, then add `/opt/riscv/bin` to your `PATH` now.  Then, simply
+run the following command:
+
+    ./configure --prefix=/opt/riscv --with-arch=rv32imc --with-cmodel=medlow --enable-multilib
+    make
+
+This will use the multilib support to build the libraries for the various cores (riscy, zeroriscy and so on). The right libraries will be selected depending on which compiler options you use.
