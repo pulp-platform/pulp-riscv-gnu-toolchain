@@ -9,12 +9,12 @@ toolchain.
 
 This repository uses submodules. You need the --recursive option to fetch the submodules automatically
 
-    $ git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
+    $ git clone --recursive to https://github.com/pulp-platform/pulp-riscv-gnu-toolchain
     
 Alternatively :
 
-    $ git clone https://github.com/riscv/riscv-gnu-toolchain
-    $ cd riscv-gnu-toolchain
+    $ git clone https://github.com/pulp-platform/pulp-riscv-gnu-toolchain
+    $ cd pulp-riscv-gnu-toolchain
     $ git submodule update --init --recursive
     
     
@@ -43,6 +43,17 @@ will patch, build, and install the toolchain.  If a local cache of the
 upstream sources exists in $(DISTDIR), it will be used; the default location
 is /var/cache/distfiles.  Your computer will need about 8 GiB of disk space to
 complete the process.
+
+### Installation (Pulp)
+
+To build the Newlib cross-compiler for all pulp variants, pick an install path.  If you choose,
+say, `/opt/riscv`, then add `/opt/riscv/bin` to your `PATH` now.  Then, simply
+run the following command:
+
+    ./configure --prefix=/opt/riscv --with-arch=rv32imc --with-cmodel=medlow --enable-multilib
+    make
+
+This will use the multilib support to build the libraries for the various cores (riscy, zeroriscy and so on). The right libraries will be selected depending on which compiler options you use.
 
 ### Installation (Newlib)
 
@@ -109,13 +120,3 @@ To test GCC, run the following commands:
     # Need qemu-riscv32 or qemu-riscv64 in your `PATH`.
     make check-gcc-linux
 
-### Installation (Pulp)
-
-To build the Newlib cross-compiler for all pulp variants, pick an install path.  If you choose,
-say, `/opt/riscv`, then add `/opt/riscv/bin` to your `PATH` now.  Then, simply
-run the following command:
-
-    ./configure --prefix=/opt/riscv --with-arch=rv32imc --with-cmodel=medlow --enable-multilib
-    make
-
-This will use the multilib support to build the libraries for the various cores (riscy, zeroriscy and so on). The right libraries will be selected depending on which compiler options you use.
