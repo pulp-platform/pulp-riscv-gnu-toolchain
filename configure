@@ -3287,7 +3287,7 @@ else
 fi
 
 if test "x$enable_multilib" != xno; then :
-  multilib_names="rv32imcxpulpv2-ilp32 gap8-ilp32 rv32imfdcxpulpv2-ilp32 rv32imcxpulpslim-ilp32 rv32ic-ilp32-mreg16"
+  multilib_names="rv32imcxpulpv2-ilp32 gap8-ilp32 rv32imfcxpulpv2-ilp32 rv32imcxpulpslim-ilp32 rv32ic-ilp32-mreg16"
 
 fi
 
