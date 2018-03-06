@@ -1,9 +1,9 @@
 [submodule "riscv-binutils-gdb"]
 	path = riscv-binutils-gdb
-	url = git@github.com:pulp-platform/pulp-riscv-binutils-gdb.git
+	url = https://github.com/pulp-platform/pulp-riscv-binutils-gdb.git
 [submodule "riscv-gcc"]
 	path = riscv-gcc
-	url = git@github.com:pulp-platform/pulp-riscv-gcc.git
+	url = https://github.com/pulp-platform/pulp-riscv-gcc.git
 [submodule "riscv-glibc"]
 	path = riscv-glibc
 	url = https://github.com/riscv/riscv-glibc.git
@@ -12,4 +12,4 @@
 	url = https://github.com/riscv/riscv-dejagnu.git
 [submodule "riscv-newlib"]
 	path = riscv-newlib
-	url = git@github.com:pulp-platform/pulp-riscv-newlib.git
+	url = https://github.com/pulp-platform/pulp-riscv-newlib.git
