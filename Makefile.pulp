@@ -1,0 +1,6 @@
+build:
+	./configure --prefix=$(PKG_DIR) --with-arch=rv32imac --with-cmodel=medlow --enable-multilib
+	make all install
+
+checkout:
+	git submodule update --init
