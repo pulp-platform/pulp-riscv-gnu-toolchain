@@ -9,7 +9,7 @@ toolchain.
 
 This repository uses submodules. You need the --recursive option to fetch the submodules automatically
 
-    $ git clone --recursive to https://github.com/pulp-platform/pulp-riscv-gnu-toolchain
+    $ git clone --recursive https://github.com/pulp-platform/pulp-riscv-gnu-toolchain
     
 Alternatively :
 
