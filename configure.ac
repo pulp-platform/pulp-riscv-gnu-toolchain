@@ -97,7 +97,7 @@ AS_IF([test "x$enable_multilib" != xno],
 	[AC_SUBST(multilib_flags,--disable-multilib)])
 
 AS_IF([test "x$enable_multilib" != xno],
-        [AC_SUBST(multilib_names,"rv32imac-ilp32 rv32imafdc-ilp32d rv64imac-lp64 rv64imafdc-lp64d")],
+        [AC_SUBST(multilib_names,"rv32imcxpulpv2-ilp32 gap8-ilp32 gap9-ilp32 rv32imfcxpulpv2-ilp32 rv32imfcxpulpv2-ilp32f rv32imcxpulpslim-ilp32 rv32ic-ilp32-mreg16")],
 	[])
 
 AC_ARG_ENABLE(gcc-checking,
