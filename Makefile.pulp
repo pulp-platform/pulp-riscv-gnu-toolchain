@@ -1,6 +1,7 @@
 build:
 	./configure --prefix=$(PKG_DIR) --with-arch=rv32imac --with-cmodel=medlow --enable-multilib
 	make all install
+	mkdir -p $(PKG_DIR)/riscv32-unknown-elf/lib
 	cp riscv.ld $(PKG_DIR)/riscv32-unknown-elf/lib
 
 checkout:
