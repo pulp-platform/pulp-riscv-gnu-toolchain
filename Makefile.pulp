@@ -3,5 +3,9 @@ build:
 	make all install
 	cp riscv.ld $(PKG_DIR)/riscv32-unknown-elf/lib
 
+strip:
+	find $(PKG_DIR)/bin -type f | xargs strip
+	find $(PKG_DIR)/libexec -type f | xargs strip
+
 checkout:
 	git submodule update --init
