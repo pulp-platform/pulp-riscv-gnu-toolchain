@@ -5,6 +5,7 @@
 [submodule "riscv-gcc"]
 	path = riscv-gcc
 	url = https://github.com/pulp-platform/pulp-riscv-gcc.git
+	branch = CV32E40P
 [submodule "riscv-glibc"]
 	path = riscv-glibc
 	url = https://github.com/riscv/riscv-glibc.git
